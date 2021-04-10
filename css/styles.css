@@ -1,64 +1,125 @@
-.list {
-  list-style: none;
-  padding-left: 0;
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  background-color: var(--white-bg-color);
+  color: var(--main-text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+p {
   margin: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+
+  margin: 0;
+}
+
+.list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
 .container {
-  max-width: 1200px;
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  border: 1px solid red;
 }
 
-.fhoto-list {
+.header-logo {
+  margin-right: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.all-header {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: space-around;
+  outline: 1px solid red;
+  justify-content: space-between;
 }
 
-.fhoto-item {
-  flex-basis: calc(100%-30px) / 3;
+.all-nav {
+  display: flex;
+  justify-content: space-between;
 }
-.fhoto-item:not(;:nth-child(3n)) {
-  margin-right: 10px;
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.button {
+.nav-list-item {
+  position: relative;
+  width: 100px;
   background-color: yellow;
-  color: blue;
-}
-
-.button:hover,
-.button:focus {
-  box-shadow: 1px 1px 1px 1px;
-  color: yellow;
-  background-color: blue;
-}
-
-.header-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  
-}
-
-.header-item {
-  display: flex;
-  flex-basis: calc(100%-10px) / 3;
-  
-
-.container2 {
-  max-width: 1600px;
-  margin-right: auto;
-  margin-left: auto;
-  border: 1px solid red;
-  
-}
-
-.name {
+  outline: 1px solid red;
   text-align: center;
-  text-transform: uppercase;
-  color: green
+}
+.nav-list-link {
+  width: 100%;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.nav-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+.nav-list-thumb {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  background-color: yellow;
+  opacity: 0;
+}
+
+.thumb-item {
+  outline: 1px solid red;
+  text-align: center;
+}
+
+.nav-list-item:hover .nav-list-thumb {
+  opacity: 1;
 }
