@@ -123,3 +123,30 @@ img {
 .nav-list-item:hover .nav-list-thumb {
   opacity: 1;
 }
+.registration {
+  background-color: teal;
+  box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15),
+    4px 4px 4px rgba(171, 129, 108, 0.15);
+  border-radius: 150px 0px 0px 150px;
+  transform: rotate(90deg);
+}
+
+.registration__header {
+  padding-top: 15px;
+  margin-bottom: 11px;
+  text-align: center;
+}
+
+.registration__text-price::after {
+  content: "";
+  margin-top: 20px;
+  border: 1px solid rgba(171, 129, 108, 0.5);
+}
+
+.registration__input {
+  width: 100%;
+}
+
+.registration__input:not(:last-child) {
+  margin-bottom: 25px;
+}
